@@ -3,7 +3,15 @@ function vector(array) {
     this.dimensions = array.length
 }
 vector.prototype.show = function () {
-    console.table(this.array)
+    if (window.chrome) {
+        var temp = []
+        for (var i = 0; i < this.array.length; i++) {
+            temp[i] = [this.array[i]]
+        }
+    } else {
+        temp = this.array
+    }
+    console.table(temp)
 }
 vector.prototype.add = function (to_add) {
     var is_array = Object.prototype.toString.call(to_add) == "[object Array]"
