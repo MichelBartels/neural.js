@@ -5,7 +5,7 @@ function vector(array) {
 vector.prototype.show = function () {
     console.table(this.array)
 }
-vector.prototype.substract = function (to_add) {
+vector.prototype.add = function (to_add) {
     var is_array = Object.prototype.toString.call(to_add) == "[object Array]"
     var is_number = typeof to_add == "number"
     if (!(is_array) && !(to_add instanceof vector) && !(is_number)){
