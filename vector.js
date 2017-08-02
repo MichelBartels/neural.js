@@ -9,7 +9,7 @@ vector.prototype.show = function () {
             temp[i] = [this.array[i]]
         }
     } else {
-        temp = this.array
+        var temp = this.array
     }
     console.table(temp)
 }
