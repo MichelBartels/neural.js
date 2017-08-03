@@ -1,4 +1,4 @@
-function vector(array) {
+var vector = function (array) {
     this.array = array
     this.dimensions = array.length
 }
